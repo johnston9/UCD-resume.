@@ -10,9 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale-1">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function() {
+    emailjs.init("user_TZnl6mBgWTUOAkmv8HKrB");
+    })();
+</script>
 </head>
 
-<body>
+<body> 
     <header class="container-fluid">
         <div class="row">
             <a href="index.html">
@@ -57,10 +65,10 @@
                 <h5 class="uppercase text-center">Let's work together</h5>
             </div>
             <div class="center-form">
-                <form>
+                <form onsubmit="return sendMail(this);">
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Project Description" required></textarea>
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email" required/>
+                    <textarea rows="5" name="project_summary" class="form-control" id="project_summary" placeholder=" Project Summary" required></textarea>
                     <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
                 </form>
             </div>
@@ -94,6 +102,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>

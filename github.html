@@ -62,10 +62,13 @@
             </div>
 
             <div class="center-form">
-                <input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()">
+                <input type="text" id="gh-username" name="gh-username" value="octocat"  >
+                <button onclick="fetchGitHubInformation()">Search</button>
                 <div id="gh-user-data" class="clearfix"></div>
                 <div id="gh-repo-data" class="clearfix"></div>
             </div>
+            <!--<input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()" />-->
+                    
         </div>
     </section>
     <footer class="container-fluid">
